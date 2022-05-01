@@ -5,8 +5,10 @@ import { STATUS_WAITING, STATUS_SUCCESS } from './Constants'
 const ExpiredNotice = () => {
     return (
         <div className="expired-notice">
-            <span>Expired!!!</span>
-            <p>Please contact with someone in ThinkUp.</p>
+            <span>EXPIRED!!!</span>
+            <br /><br />
+            <p>Your time is over!<br/><br/>
+                Please contact with someone in ThinkUp.</p>
         </div>
     );
 };
@@ -14,7 +16,8 @@ const ExpiredNotice = () => {
 const WaitingNotice = () => {
     return (
         <div className="waiting-notice">
-            <span>Waiting!!!</span>
+            <span>LET'S START!!!</span>
+            <br /><br />
             <p>Please download the file to init the test.</p>
         </div>
     );
@@ -24,6 +27,7 @@ const SuccessNotice = () => {
     return (
         <div className="success-notice">
             <span>GREAT!!!</span>
+            <br /><br />
             <p>We will checking your code.</p>
         </div>
     );

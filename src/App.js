@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CountdownTimer from './CountdownTimer';
 import './App.css';
+import logo from './img/thinkup-logo-footer.svg'
 import { TARGET_DATE, STATUS_KEY, STATUS_WAITING, STATUS_EXPIRED, STATUS_COUTING, STATUS_SUCCESS } from './Constants'
 
 function UploadData(e, callback) {
@@ -50,6 +51,8 @@ function App() {
           }
           }
         />
+        <br />
+        <br />
         <a
           href={GOOGLE_TEST_LINK}
           className='download-link'
@@ -68,6 +71,7 @@ function App() {
       <br />
       <br />
       <form
+        className='form__status'
         hidden={formStatus === STATUS_WAITING || formStatus === STATUS_EXPIRED || formStatus === STATUS_SUCCESS}
         onSubmit={e => {
           setLoading(true);
@@ -86,12 +90,12 @@ function App() {
         method='post'
       >
         <fieldset>
-          <label>
-            <h1>Test result</h1>
-            <p>Upload your code in a .zip file.</p>
-            <br />
-            <br />
-            <p>Your name</p>
+          <h1>Test result</h1>
+          <p>Upload your code in a .zip file.</p>
+          <br />
+          <br />
+          <div>
+            <label>Your name</label>
             <input
               name="username"
               value={username}
@@ -99,17 +103,27 @@ function App() {
               onChange={e =>
                 setUsername(e.target.value)
               } />
-            <br />
-            <br />
-            <p>Your code</p>
-            <input name="file" type='file' accept='.zip' />
-          </label>
+          </div>
+          <br />
+          <br />
+          <div>
+            <label>Your code</label>
+            <input name="file" class='hide_file' type='file' accept='.zip' />
+          </div>
         </fieldset>
         <br />
         <br />
         <br />
         <button type="submit">Submit</button>
       </form>
+      <footer className='footer'>
+        <div class="footer__inner inner">
+          <a href="https://thinkupsoft.com/" target={'_blank'} class="footer__logo">
+            <img src={logo} alt="logo" />
+          </a>
+          <div class="footer__copy copy">Copyright © <span id="current-year">2022</span>. All rights reserved</div>
+        </div>
+      </footer>
     </div>
   )
 }

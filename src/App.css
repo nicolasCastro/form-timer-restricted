@@ -1,3 +1,14 @@
+body {
+  background-color: #0B1213;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
 .App {
   text-align: center;
 }
@@ -40,7 +51,7 @@
 .expired-notice {
   text-align: center;
   padding: 2rem;
-  border: 1px solid #ebebeb;
+  border: 1px solid #ef003b;
   border-radius: 0.25rem;
   margin: 0.5rem;
 }
@@ -48,17 +59,18 @@
 .expired-notice > span {
   font-size: 2.5rem;
   font-weight: bold;
-  color: red;
+  color: #ef003b;
 }
 
 .expired-notice > p {
   font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .waiting-notice {
   text-align: center;
   padding: 2rem;
-  border: 1px solid #ebebeb;
+  border: 1px solid #00f0c7;
   border-radius: 0.25rem;
   margin: 0.5rem;
 }
@@ -66,17 +78,22 @@
 .waiting-notice > span {
   font-size: 2.5rem;
   font-weight: bold;
-  color: blue;
+  color: #00f0c7;
 }
 
 .waiting-notice > p {
   font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.download-link {
+  color: #00f0c7;
 }
 
 .success-notice {
   text-align: center;
   padding: 2rem;
-  border: 1px solid #ebebeb;
+  border: 1px solid #00f0c7;
   border-radius: 0.25rem;
   margin: 0.5rem;
 }
@@ -84,11 +101,12 @@
 .success-notice > span {
   font-size: 2.5rem;
   font-weight: bold;
-  color: green;
+  color: #00f0c7;
 }
 
 .success-notice > p {
   font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .show-counter {
@@ -104,10 +122,10 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   padding: 0.5rem;
-  border: 1px solid #ebebeb;
+  border: 1px solid #ffffff;
   border-radius: 0.25rem;
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
 }
 
 .show-counter .countdown {
@@ -119,7 +137,7 @@
 }
 
 .show-counter .countdown.danger {
-  color: #ff0000;
+  color: #ef003b;
 }
 
 .show-counter .countdown > p {
@@ -133,8 +151,8 @@
 }
 
 .loader {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #3498db; /* Blue */
+  border: 8px solid #ffffff; /* Light grey */
+  border-top: 8px solid #00f0c7; /* Blue */
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -144,4 +162,108 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+}
+
+.footer {
+  padding: 20px 0;
+  color: #fff;
+  background-color: #20262c;
+}
+
+.footer__logo {
+  float: right;
+}
+
+.copy {
+  opacity: 0.6;
+  font-size: 11px;
+  line-height: 1.73;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.footer__copy {
+  float: left;
+}
+
+.inner {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.inner {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.inner {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+
+.form__status {
+  color: #ffffff;
+  padding: 2rem;
+  border: 1px solid #00f0c7;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+}
+
+.form__status label {
+  color: #ffffff;
+  font-size: small;
+  font-weight: 400;
+  margin-right: 2rem;
+}
+
+.form__status h1 {
+  color: #00f0c7;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.form__status input {
+  color: #ffffff;
+  font-size: medium;
+  font-weight: 400;
+  align-self: start;
+  align-content: center;
+}
+
+.form__status input button{
+  background-color: #00f0c7;
+  color: #ffffff;
+  font-size: medium;
+  font-weight: 400;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  color: #ffffff;
+  font-size: smaller;
+  font-weight: 700;
+  background-color: #00f0c7;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  border: #0B1213;
+}
+
+.form__status button {
+  color: #ffffff;
+  font-size: medium;
+  font-weight: 700;
+  background-color: #00f0c7;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  border: #0B1213;
 }
